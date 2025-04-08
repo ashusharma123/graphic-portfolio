@@ -1,0 +1,185 @@
+/* === Global Styles === */
+@font-face {
+    font-family: 'MADE Mirage';
+    src: url('fonts/MADEMirage-Regular.ttf') format('truetype');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: 'MADE Mirage';
+    src: url('fonts/MADEMirage-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: 'MADE Mirage', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fefeff;
+    color: #2c3e50;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    color: #1e272e;
+  }
+  
+  /* === Welcome Animation === */
+  #welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, #fff0f5, #eae6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeOut 2s 3s forwards;
+  }
+  
+  #welcome-text {
+    font-size: 3rem;
+    color: #8e44ad;
+    animation: scaleIn 2s ease-in-out;
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  /* === Section Layout === */
+  section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6c5ce7;
+    text-align: center;
+  }
+  
+  .section-desc {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* === Project Grid === */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .project-item img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-item img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  }
+  
+  /* === Footer === */
+  footer {
+    background: #6c5ce7;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1rem;
+    border-top: 6px solid #f368e0;
+  }
+  
+  footer a {
+    color: #ffeaa7;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* === Responsive === */
+  @media screen and (max-width: 768px) {
+    #welcome-text {
+      font-size: 2.2rem;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }
+  .portfolio-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f3f4f6;
+    animation: slideFade 1.5s ease-in-out;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotateIn 1.2s ease;
+  }
+  
+  .portfolio-title {
+    font-family: "MADE Mirage Bold", serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    animation: scaleIn 1.2s ease;
+  }
+  
+  @keyframes rotateIn {
+    0% {
+      transform: rotate(-180deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideFade {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+    
